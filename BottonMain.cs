@@ -8,13 +8,13 @@ using UnityEngine;
 using System.Collections;
 
 public class BottonMain : MonoBehaviour {
-	public void Inicio(){
-		Application.LoadLevel(1);
+	public void Jugar(bool actv){
+		if(actv == true){Application.LoadLevel(1);}
 	}
 	public void Salir(bool act){
 		if(act == true){Application.Quit();
 			Debug.Log("Quit enabled");}
 	}
-	public void Main(){
-		Application.LoadLevel(0);}
+	public void Princi(bool acti){
+		if(acti == true){Application.LoadLevel(0);}}
 }
