@@ -8,6 +8,7 @@ using UnityEngine;
 using System.Collections;
 
 public class BottonMain : MonoBehaviour {
+	public GameObject MenuSecond;
 	public void Jugar(bool actv){
 		if(actv == true){Application.LoadLevel(1);}
 	}
@@ -17,4 +18,8 @@ public class BottonMain : MonoBehaviour {
 	}
 	public void Princi(bool acti){
 		if(acti == true){Application.LoadLevel(0);}}
+	public void ActUI(bool atv){
+		if(atv == false){MenuSecond.SetActive(false);}
+		else{MenuSecond.SetActive(true);}
+	}
 }
