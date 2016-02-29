@@ -1,10 +1,11 @@
 ﻿/* Script scorev2, lleva la cuenta de las vidas y puntos obtenidos por el player,
  * y lo implementa en un UI-Text e UI-Image de la interfaz.
  * 
- * Creada por Ezequiel Merino, by Legendary Rpg en MonoDevelop 4.0/Unity 5.2 @2015
+ * Creada por Ezequiel Merino, by Legendary Rpg en MonoDevelop 4.0/Unity 5.3.2 @2015/16
  */
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -24,7 +25,7 @@ public class scorev2 : MonoBehaviour {
 		else if(restor == 6){restor1.enabled = false;}	
 		else if(restor == 4){restor2.enabled = false;}
 		else if(restor == 2){restor3.enabled = false;}
-		else if(restor == 0){Application.LoadLevel(3);}
+		else if(restor == 0){SceneManager.LoadScene(3);}
 		reint = restor;
 	}
 }

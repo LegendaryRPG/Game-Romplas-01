@@ -1,7 +1,7 @@
 ﻿/* Script crystalsrecont, modifica la variable score del script scorev2, cada vez
  * que el player activa el trigger del Gameobject de esta script, y luego lo elimina.
  * 
- * Creada por Ezequiel Merino, by Legendary Rpg en MonoDevelop 4.0/Unity 5.2 @2015
+ * Creada por Ezequiel Merino, by Legendary Rpg en MonoDevelop 4.0/Unity 5.3.2 @2015/16
  */
 
 using UnityEngine;

@@ -1,7 +1,7 @@
 /* Script Restarter, viene por defecto en los Assets 2D, fue modificada para implementar
  * el sistema de replays, score y checkpoint.
  * 
- * Creada por Ezequiel Merino, by Legendary Rpg en MonoDevelop 4.0/Unity 5.2 @2015
+ * Creada por Ezequiel Merino, by Legendary Rpg en MonoDevelop 4.0/Unity 5.3.2 @2015/16
  */ 
 
 using System;
