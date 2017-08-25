@@ -23,9 +23,9 @@ public class scorev1 : MonoBehaviour {
 
 	void Update () {
 		score = scorv2.score;
-		score2 = scorv2.reint;
-		mytex.text = "Crystals: "+score;
-		if(score2 == 6){restor1.enabled = false;}	
+		score2 = scorv2.restor;
+		mytex.text = "Crystals: " + score;
+		if(score2 == 6){restor1.enabled = false;}
 		else if(score2 == 4){restor1.enabled = false; restor2.enabled = false;}
 		else if(score2 == 2){restor1.enabled = false; restor2.enabled = false; restor3.enabled = false;}
 	}

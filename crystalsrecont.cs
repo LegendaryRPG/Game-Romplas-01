@@ -14,8 +14,10 @@ public class crystalsrecont : MonoBehaviour {
 		nscore = GameObject.FindGameObjectWithTag("DataBase").GetComponent<scorev2>();
 		Player = GameObject.FindGameObjectWithTag("Player");
 	}
+
 	void Update(){}
+
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.gameObject == Player){nscore.score+= 1; Destroy(this.gameObject);}
+		if(other.gameObject == Player){ nscore.score++; Destroy(this.gameObject);}
 	}
 }
