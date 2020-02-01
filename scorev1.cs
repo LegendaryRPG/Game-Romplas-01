@@ -1,7 +1,6 @@
-﻿/* Script scorev1, gemela de scorev2, utilizada para utilizar sus datos en otro
+﻿/* 
+ * Script scorev1, gemela de scorev2, utilizada para utilizar sus datos en otro
  * level, conservando los datos del level anterior.
- * 
- * Creada por Ezequiel Merino, by Legendary Rpg en MonoDevelop 4.0/Unity 5.3.2 @2015/16
  */ 
 
 using UnityEngine;
@@ -26,7 +25,14 @@ public class scorev1 : MonoBehaviour {
 		score2 = scorv2.restor;
 		mytex.text = "Crystals: " + score;
 		if(score2 == 6){restor1.enabled = false;}
-		else if(score2 == 4){restor1.enabled = false; restor2.enabled = false;}
-		else if(score2 == 2){restor1.enabled = false; restor2.enabled = false; restor3.enabled = false;}
+		else if(score2 == 4){
+            restor1.enabled = false; 
+            restor2.enabled = false;
+        }
+		else if(score2 == 2){
+            restor1.enabled = false; 
+            restor2.enabled = false; 
+            restor3.enabled = false;
+        }
 	}
 }

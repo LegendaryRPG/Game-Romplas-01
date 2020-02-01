@@ -1,7 +1,6 @@
-﻿/* Script scorev2, lleva la cuenta de las vidas y puntos obtenidos por el player,
+﻿/* 
+ * Script scorev2, lleva la cuenta de las vidas y puntos obtenidos por el player,
  * y lo implementa en un UI-Text e UI-Image de la interfaz.
- * 
- * Creada por Ezequiel Merino, by Legendary Rpg en MonoDevelop 4.0/Unity 5.3.2 @2015/16
  */
 
 using UnityEngine;
@@ -22,7 +21,12 @@ public class scorev2 : MonoBehaviour {
 
 	void Update(){
 		//mytex.text = "Crystals: " + score;
-		if(restor == 7 || restor == 5 || restor == 3 || restor == 1){score = 0; restor -= 1;}
-		else if(restor == 0){SceneManager.LoadScene(3);}
+		if(restor == 7 || restor == 5 || restor == 3 || restor == 1){
+            score = 0; 
+            restor -= 1;
+        }
+		else if(restor == 0){
+            SceneManager.LoadScene(3);
+        }
 	}
 }

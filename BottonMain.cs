@@ -1,7 +1,6 @@
-﻿/* Script BottonMain, se utiliza principalmente para el OnClick,
+﻿/* 
+ * Script BottonMain, se utiliza principalmente para el OnClick,
  * de los botones del UI de Unity.
- * 
- * Creada por Ezequiel Merino, by Legendary Rpg en MonoDevelop 4.0/Unity 5.3.2 @2015/16
  */
 
 using UnityEngine;
@@ -10,24 +9,55 @@ using System.Collections;
 
 public class BottonMain : MonoBehaviour {
 	public GameObject MenuSecond;
+	public AudioClip BotJug;
+	public AudioClip BotExt;
+	public AudioClip BotPrinc;
+	public AudioClip BotCred;
+	AudioSource playy;
 	scorev2 sv2;
 
 	void Awake(){
-		sv2 = GameObject.FindGameObjectWithTag("DataBase").GetComponent<scorev2>();
+		sv2 = GameObject.FindGameObjectWithTag ("DataBase").GetComponent<scorev2> ();
+		playy = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<AudioSource> ();
 	}
 
 	public void Jugar(bool actv){
-		if(actv == true){SceneManager.LoadScene(1); sv2.score = 0; sv2.restor = 8;}
+		if(actv == true){
+            playy.clip = BotJug; playy.Play (); 
+            SceneManager.LoadScene(1); 
+            sv2.score = 0; 
+            sv2.restor = 8;
+        }
 	}
-	public void Salir(bool act){
-		if(act == true){Application.Quit();
-			Debug.Log("Quit enabled");}
-	}
+    public void Salir(bool act){
+        if (act == true){
+            playy.clip = BotExt;
+            playy.Play();
+            Application.Quit();
+            Debug.Log("Quit enabled");
+        }
+    }
+
 	public void Princi(bool acti){
-		if(acti == true){SceneManager.LoadScene(0); sv2.score = 0; sv2.restor = 8;}}
+		if(acti == true){
+            playy.clip = BotPrinc; 
+            playy.Play ();
+            SceneManager.LoadScene(0); 
+            sv2.score = 0; 
+            sv2.restor = 8;
+        }
+    }
 
 	public void ActUI(bool atv){
-		if(atv == false){MenuSecond.SetActive(false);}
-		else{MenuSecond.SetActive(true);}
+		if(atv == false){
+            MenuSecond.SetActive(false);
+            playy.clip = BotCred;
+            playy.Play ();
+        }
+		else{
+            MenuSecond.SetActive(true);
+            playy.clip = BotCred; 
+            playy.Play ();
+        }
 	}
 }

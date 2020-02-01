@@ -12,13 +12,14 @@ public class CheckPoint : MonoBehaviour {
 	/// Indicate if the checkpoint is activated
 	/// </summary>
 	public bool Activated = false;
-	
+	public Sprite ActivT;
+	public Sprite ActivF;
 	#endregion
 	
 	#region Private Variables
 	
 	private Animator thisAnimator;
-	
+	SpriteRenderer Spriter;
 	#endregion
 	
 	#region Static Variables
@@ -72,6 +73,12 @@ public class CheckPoint : MonoBehaviour {
 		thisAnimator = GetComponent<Animator>();
 		// We search all the checkpoints in the current scene
 		CheckPointsList = GameObject.FindGameObjectsWithTag("CheckPoint");
+		Spriter = gameObject.GetComponent<SpriteRenderer>();
+	}
+
+	void Update(){
+		if (Activated == true) {Spriter.sprite = ActivT;}
+		else {Spriter.sprite = ActivF;}
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
